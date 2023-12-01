@@ -20,8 +20,13 @@ class MyApp extends StatelessWidget {
       ),
 
       // 路由
-      initialRoute: '/',
+      // initialRoute: '/',
+      // getPages: RoutePages.list,
+
+      // 路由
+      initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.list,
+      navigatorObservers: [RoutePages.observer],
 
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

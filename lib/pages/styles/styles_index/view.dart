@@ -11,12 +11,22 @@ class StylesIndexPage extends GetView<StylesIndexController> {
   Widget _buildView() {
     return Column(
       children: [
+        // 多语言
         ListTile(
           onTap: controller.onLanguageSelected,
           title: Text(
             "语言 : ${ConfigService.to.locale.toLanguageTag()}",
           ),
         ),
+        // 主题样式
+        ListTile(
+          onTap: controller.onThemeSelected,
+          title: Text("主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
+        ),
+        ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
+        FilledButton(onPressed: () {}, child: const Text("FilledButton")),
+        OutlinedButton(onPressed: () {}, child: const Text("OutlinedButton")),
+        TextButton(onPressed: () {}, child: const Text("TextButton")),
       ],
     );
   }

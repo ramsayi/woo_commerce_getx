@@ -1,4 +1,4 @@
-package woo.commerce.getx.woo_commerce_getx
+package woo.commerce.getx
 
 import io.flutter.embedding.android.FlutterActivity
 

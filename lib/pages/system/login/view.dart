@@ -19,6 +19,13 @@ class LoginPage extends GetView<LoginController> {
             },
             child: const Text("点击"),
           ),
+          // 跳转
+          ElevatedButton(
+            onPressed: () {
+              Get.toNamed("/splash");
+            },
+            child: const Text("跳转 splash"),
+          ),
         ],
       ),
     );

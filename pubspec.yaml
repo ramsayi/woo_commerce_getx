@@ -48,6 +48,7 @@ dependencies:
   flutter_displaymode: ^0.6.0
   flutter_screenutil: ^5.9.0
   flutter_native_splash: ^2.2.16
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:

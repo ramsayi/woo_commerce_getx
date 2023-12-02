@@ -45,6 +45,7 @@ dependencies:
   flutter_svg: ^2.0.9
   badges: ^3.1.2
   extended_image: ^8.2.0
+  flutter_displaymode: ^0.6.0
 
 dev_dependencies:
   flutter_test:

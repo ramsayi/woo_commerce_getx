@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo_commerce_getx/pages/index.dart';
 
 import 'index.dart';
 
@@ -37,7 +38,9 @@ class LoginQuickPage extends GetView<LoginQuickController> {
           "Sign In",
           backgroundColor: const Color(0xFFFD8700),
           borderRadius: 18,
-          onTap: () {},
+          onTap: () {
+            Get.to(const StylesIndexPage());
+          },
         ).tight(width: double.infinity, height: 57).paddingBottom(20),
 
         // 注册

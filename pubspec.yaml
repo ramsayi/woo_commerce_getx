@@ -47,6 +47,7 @@ dependencies:
   extended_image: ^8.2.0
   flutter_displaymode: ^0.6.0
   flutter_screenutil: ^5.9.0
+  flutter_native_splash: ^2.2.16
 
 dev_dependencies:
   flutter_test:
@@ -59,6 +60,11 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_launcher_icons_maker: ^0.10.2
+
+# 设备启动图
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/icons/launcher_android.png"
 
 # app 图标
 flutter_icons:

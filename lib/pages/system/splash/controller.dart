@@ -1,10 +1,11 @@
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/pages/system/login_quick/index.dart';
 
 class SplashController extends GetxController {
   SplashController();
 
   _initData() {
+    FlutterNativeSplash.remove(); // 删除设备启动图
     update(["splash"]);
   }
 
@@ -19,8 +20,6 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     _initData();
-
-    Get.to(const LoginQuickPage());
   }
 
   // @override

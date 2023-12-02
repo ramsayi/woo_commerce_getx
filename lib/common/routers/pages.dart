@@ -12,6 +12,10 @@ class RoutePages {
   // static List<GetPage> list = [];
   static List<GetPage> list = [
     GetPage(
+      name: RouteNames.main,
+      page: () => const MainPage(),
+    ),
+    GetPage(
       name: RouteNames.cartApplyPromoCode,
       page: () => const ApplyPromoCodePage(),
     ),

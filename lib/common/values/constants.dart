@@ -8,4 +8,6 @@ class Constants {
   static const storageLanguageCode = 'language_code';
   // 主题模式
   static const storageThemeCode = 'theme_mode';
+  // 首次打开
+  static const storageAlreadyOpen = 'already_open';
 }

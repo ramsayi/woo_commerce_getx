@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:flutter_displaymode/flutter_displaymode.dart';
 
 import '../index.dart';
 
@@ -28,6 +29,7 @@ class ConfigService extends GetxService {
     await getPlatform();
     initLocale();
     initTheme();
+    await setHighRefreshRate();
     return this;
   }
 
@@ -74,5 +76,10 @@ class ConfigService extends GetxService {
     locale = value;
     Get.updateLocale(value);
     Storage().setString(Constants.storageLanguageCode, value.languageCode);
+  }
+
+  // 设置高刷新率
+  Future<void> setHighRefreshRate() async {
+    await FlutterDisplayMode.setHighRefreshRate();
   }
 }

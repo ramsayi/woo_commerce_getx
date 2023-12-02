@@ -18,8 +18,5 @@ class Global {
     ]).whenComplete(() {
       Get.put<WPHttpService>(WPHttpService());
     });
-
-    // 设置高刷新率
-    await DisplayMode.setHighRefreshRate();
   }
 }

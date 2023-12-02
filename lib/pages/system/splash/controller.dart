@@ -14,7 +14,7 @@ class SplashController extends GetxController {
 
   _jumpToPage() {
     // 欢迎页
-    Future.delayed(const Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 0), () {
       Get.offAllNamed(RouteNames.systemWelcome);
     });
   }

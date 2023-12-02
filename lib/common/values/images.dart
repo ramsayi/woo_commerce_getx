@@ -14,4 +14,5 @@ class AssetsImages {
   static const logoPng = 'assets/images/logo.png';
   static const logo_1Png = 'assets/images/logo_1.png';
   static const logo_2Png = 'assets/images/logo_2.png';
+  static const splashJpg = 'assets/images/splash.jpg';
 }

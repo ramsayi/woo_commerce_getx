@@ -21,8 +21,10 @@ class RegisterPage extends GetView<RegisterController> {
           labelText: LocaleKeys.registerFormName.tr,
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
-            Validatorless.min(3, LocaleKeys.validatorMin.trParams({"size": "3"})),
-            Validatorless.max(20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+            Validatorless.min(
+                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+            Validatorless.max(
+                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
           ]),
         ),
 
@@ -45,8 +47,10 @@ class RegisterPage extends GetView<RegisterController> {
           labelText: LocaleKeys.registerFormFirstName.tr,
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
-            Validatorless.min(3, LocaleKeys.validatorMin.trParams({"size": "3"})),
-            Validatorless.max(20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+            Validatorless.min(
+                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+            Validatorless.max(
+                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
           ]),
         ),
 
@@ -57,8 +61,10 @@ class RegisterPage extends GetView<RegisterController> {
           labelText: LocaleKeys.registerFormLastName.tr,
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
-            Validatorless.min(3, LocaleKeys.validatorMin.trParams({"size": "3"})),
-            Validatorless.max(20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+            Validatorless.min(
+                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+            Validatorless.max(
+                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
           ]),
         ),
 
@@ -69,7 +75,11 @@ class RegisterPage extends GetView<RegisterController> {
           isObscure: true,
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
-            Validators.password(8, 18, LocaleKeys.validatorPassword.trParams({"min": "8", "max": "18"}))
+            Validators.password(
+                8,
+                18,
+                LocaleKeys.validatorPassword
+                    .trParams({"min": "8", "max": "18"}))
           ]),
         ).paddingBottom(50),
 
@@ -119,7 +129,9 @@ class RegisterPage extends GetView<RegisterController> {
 
       // 表单
       _buildForm().card(),
-    ].toColumn(crossAxisAlignment: CrossAxisAlignment.start).paddingHorizontal(AppSpace.page));
+    ]
+            .toColumn(crossAxisAlignment: CrossAxisAlignment.start)
+            .paddingHorizontal(AppSpace.page));
   }
 
   @override

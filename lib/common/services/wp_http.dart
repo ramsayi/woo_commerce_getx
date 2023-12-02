@@ -135,7 +135,8 @@ class RequestInterceptors extends Interceptor {
   // }
 
   @override
-  Future<void> onError(DioException err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(
+      DioException err, ErrorInterceptorHandler handler) async {
     final exception = HttpException(err.message ?? "");
     switch (err.type) {
       case DioExceptionType.badResponse: // 服务端自定义错误体处理

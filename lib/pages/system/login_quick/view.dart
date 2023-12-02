@@ -12,11 +12,15 @@ class LoginQuickPage extends GetView<LoginQuickController> {
   Widget _buildView() {
     return <Widget>[
       // logo
-      const ImageWidget.asset(AssetsImages.logo_2Png, width: 100, height: 100).paddingBottom(22),
+      const ImageWidget.asset(AssetsImages.logo_2Png, width: 100, height: 100)
+          .paddingBottom(22),
       // 标题1
-      TextWidget.title2("Let's Sign You In", color: AppColors.onPrimary).paddingBottom(10),
+      TextWidget.title2("Let's Sign You In", color: AppColors.onPrimary)
+          .paddingBottom(10),
       // 标题2
-      TextWidget.body2("Welcome back, you've been missed!", color: AppColors.onPrimary).paddingBottom(55),
+      TextWidget.body2("Welcome back, you've been missed!",
+              color: AppColors.onPrimary)
+          .paddingBottom(55),
 
       // 表单
       <Widget>[
@@ -25,12 +29,15 @@ class LoginQuickPage extends GetView<LoginQuickController> {
             .paddingBottom(AppSpace.listRow)
             .paddingTop(20),
         // username input
-        InputWidget.iconTextFilled(IconWidget.icon(Icons.person, color: AppColors.secondary))
+        InputWidget.iconTextFilled(
+                IconWidget.icon(Icons.person, color: AppColors.secondary))
             .paddingBottom(AppSpace.listRow * 2),
         // password
-        TextWidget.body1("Password", color: AppColors.secondary).paddingBottom(AppSpace.listRow),
+        TextWidget.body1("Password", color: AppColors.secondary)
+            .paddingBottom(AppSpace.listRow),
         // password input
-        InputWidget.iconTextFilled(IconWidget.icon(Icons.lock_outline, color: AppColors.secondary))
+        InputWidget.iconTextFilled(
+                IconWidget.icon(Icons.lock_outline, color: AppColors.secondary))
             .paddingBottom(AppSpace.listRow * 2),
 
         // 登录按钮
@@ -46,7 +53,9 @@ class LoginQuickPage extends GetView<LoginQuickController> {
         // 注册
         <Widget>[
           // 文字
-          TextWidget.body1("Don't have an account? ", color: AppColors.secondary).paddingRight(AppSpace.listItem),
+          TextWidget.body1("Don't have an account? ",
+                  color: AppColors.secondary)
+              .paddingRight(AppSpace.listItem),
           // 注册按钮
           ButtonWidget.text(
             "Sign Up",
@@ -55,8 +64,13 @@ class LoginQuickPage extends GetView<LoginQuickController> {
             onTap: () {},
           )
         ].toRow(mainAxisAlignment: MainAxisAlignment.center),
-      ].toColumn(crossAxisAlignment: CrossAxisAlignment.start).paddingAll(20).card(color: Colors.white, radius: 35),
-    ].toColumn(mainAxisAlignment: MainAxisAlignment.center).paddingHorizontal(15);
+      ]
+          .toColumn(crossAxisAlignment: CrossAxisAlignment.start)
+          .paddingAll(20)
+          .card(color: Colors.white, radius: 35),
+    ]
+        .toColumn(mainAxisAlignment: MainAxisAlignment.center)
+        .paddingHorizontal(15);
   }
 
   @override

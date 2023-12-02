@@ -49,7 +49,9 @@ class WelcomeSliderWidget extends StatelessWidget {
               softWrap: true,
               textAlign: TextAlign.center,
             )
-        ].toColumn(mainAxisAlignment: MainAxisAlignment.spaceAround).width(MediaQuery.of(context).size.width);
+        ]
+            .toColumn(mainAxisAlignment: MainAxisAlignment.spaceAround)
+            .width(MediaQuery.of(context).size.width);
       },
     );
   }

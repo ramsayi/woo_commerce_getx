@@ -21,6 +21,8 @@ class PageTitleWidget extends StatelessWidget {
     return <Widget>[
       TextWidget.title1(title),
       TextWidget.body2(desc),
-    ].toColumn(crossAxisAlignment: CrossAxisAlignment.start).padding(left: 10, top: 10, bottom: 30);
+    ]
+        .toColumn(crossAxisAlignment: CrossAxisAlignment.start)
+        .padding(left: 10, top: 10, bottom: 30);
   }
 }

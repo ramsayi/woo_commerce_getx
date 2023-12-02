@@ -119,7 +119,10 @@ class ButtonsPage extends GetView<ButtonsController> {
         onTap: () {},
       ).paddingBottom(AppSpace.listRow),
 
-      //
+      ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
+      FilledButton(onPressed: () {}, child: const Text("FilledButton")),
+      OutlinedButton(onPressed: () {}, child: const Text("OutlinedButton")),
+      TextButton(onPressed: () {}, child: const Text("TextButton")),
     ].toColumn();
   }
 

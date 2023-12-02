@@ -30,15 +30,19 @@ class WelcomePage extends GetView<WelcomeController> {
       init: controller,
       builder: (controller) {
         return controller.isShowStart
-            ? ButtonWidget.primary(LocaleKeys.welcomeStart.tr, onTap: controller.onToMain)
+            ? ButtonWidget.primary(LocaleKeys.welcomeStart.tr,
+                    onTap: controller.onToMain)
                 .tight(width: double.infinity, height: 50.h)
             : <Widget>[
                 // 跳过
-                ButtonWidget.text(LocaleKeys.welcomeSkip.tr, onTap: controller.onToMain),
+                ButtonWidget.text(LocaleKeys.welcomeSkip.tr,
+                    onTap: controller.onToMain),
                 // 指示标
-                SliderIndicatorWidget(length: 3, currentIndex: controller.currentIndex),
+                SliderIndicatorWidget(
+                    length: 3, currentIndex: controller.currentIndex),
                 // 下一页
-                ButtonWidget.text(LocaleKeys.welcomeNext.tr, onTap: controller.onNext),
+                ButtonWidget.text(LocaleKeys.welcomeNext.tr,
+                    onTap: controller.onNext),
               ].toRow(mainAxisAlignment: MainAxisAlignment.spaceAround);
       },
     );
@@ -51,7 +55,9 @@ class WelcomePage extends GetView<WelcomeController> {
       _buildSlider(),
       // 控制栏
       _buildBar(),
-    ].toColumn(mainAxisAlignment: MainAxisAlignment.spaceAround).paddingAll(AppSpace.page);
+    ]
+        .toColumn(mainAxisAlignment: MainAxisAlignment.spaceAround)
+        .paddingAll(AppSpace.page);
   }
 
   @override

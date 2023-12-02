@@ -51,12 +51,9 @@ class StylesIndexPage extends GetView<StylesIndexController> {
         // 主题样式
         ListTile(
           onTap: controller.onThemeSelected,
-          title: TextWidget.body1("主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
+          title: TextWidget.body1(
+              "主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
         ),
-        ElevatedButton(onPressed: () {}, child: const Text("ElevatedButton")),
-        FilledButton(onPressed: () {}, child: const Text("FilledButton")),
-        OutlinedButton(onPressed: () {}, child: const Text("OutlinedButton")),
-        TextButton(onPressed: () {}, child: const Text("TextButton")),
       ],
     );
   }

@@ -15,7 +15,9 @@ class RegisterPinPage extends GetView<RegisterPinController> {
       autovalidateMode: AutovalidateMode.onUserInteraction,
       child: <Widget>[
         // 提示文
-        TextWidget.body1(LocaleKeys.registerPinFormTip.tr).paddingBottom(20.w).alignLeft(),
+        TextWidget.body1(LocaleKeys.registerPinFormTip.tr)
+            .paddingBottom(20.w)
+            .alignLeft(),
 
         // pin
         PinPutWidget(
@@ -53,7 +55,9 @@ class RegisterPinPage extends GetView<RegisterPinController> {
 
       // 表单
       _buildForm().card(),
-    ].toColumn(crossAxisAlignment: CrossAxisAlignment.start).paddingHorizontal(AppSpace.page));
+    ]
+            .toColumn(crossAxisAlignment: CrossAxisAlignment.start)
+            .paddingHorizontal(AppSpace.page));
   }
 
   @override

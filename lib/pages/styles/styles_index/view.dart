@@ -11,6 +11,11 @@ class StylesIndexPage extends GetView<StylesIndexController> {
   Widget _buildView() {
     return Column(
       children: [
+        // 文本
+        ListTile(
+          onTap: () => Get.toNamed(RouteNames.stylesText),
+          title: const Text("Text 文本"),
+        ),
         // 多语言
         ListTile(
           onTap: controller.onLanguageSelected,

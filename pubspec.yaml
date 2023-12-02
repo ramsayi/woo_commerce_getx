@@ -51,6 +51,7 @@ dependencies:
   carousel_slider: ^4.2.1
   validatorless: ^1.2.3
   pinput: ^3.0.1
+  flutter_easyloading: ^3.0.5
 
 dev_dependencies:
   flutter_test:

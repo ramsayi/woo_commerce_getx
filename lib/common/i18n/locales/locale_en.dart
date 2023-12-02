@@ -17,6 +17,13 @@ Map<String, String> localeEn = {
   // 样式
   LocaleKeys.stylesTitle: 'Sytles && Function',
 
+  // 验证提示
+  LocaleKeys.validatorRequired: 'The field is obligatory',
+  LocaleKeys.validatorEmail: 'The field must be an email',
+  LocaleKeys.validatorMin: 'Length cannot be less than @size',
+  LocaleKeys.validatorMax: 'Length cannot be greater than @size',
+  LocaleKeys.validatorPassword: 'password must have between @min and @max digits',
+
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: 'Choose Your Desire Product',
   LocaleKeys.welcomeOneDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',

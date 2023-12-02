@@ -15,6 +15,15 @@ class LocaleKeys {
   // 样式
   static const stylesTitle = 'styles_title';
 
+  // 验证提示
+  static const validatorRequired = 'validator_required';
+  static const validatorEmail = 'validator_email';
+  static const validatorMin = 'validator_min';
+  static const validatorMax = 'validator_max';
+  static const validatorPassword = 'validator_password';
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   // 欢迎页
   static const welcomeOneTitle = 'welcome_one_title';
   static const welcomeOneDesc = 'welcome_one_desc';

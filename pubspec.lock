@@ -554,6 +554,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.2.2"
+  validatorless:
+    dependency: "direct main"
+    description:
+      name: validatorless
+      sha256: ddb46df636114b3322d289489164cac309767b157191ba43c7ad49b28c2b57c7
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.2.3"
   vector_graphics:
     dependency: transitive
     description:

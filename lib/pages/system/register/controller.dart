@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 class RegisterController extends GetxController {
   RegisterController();
 
+  GlobalKey formKey = GlobalKey<FormState>();
+
   // 用户名
   TextEditingController userNameController = TextEditingController(text: "ducafecat5");
   // 邮件
@@ -16,7 +18,11 @@ class RegisterController extends GetxController {
   TextEditingController passwordController = TextEditingController(text: "12345678");
 
   // 注册
-  void onSignUp() {}
+  void onSignUp() {
+    if ((formKey.currentState as FormState).validate()) {
+      // 验证通过提交数据
+    }
+  }
 
   // 登录
   void onSignIn() {}

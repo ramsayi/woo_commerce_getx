@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:woo_commerce_getx/common/index.dart';
 
 import 'index.dart';
 
@@ -27,8 +28,11 @@ class _MainViewGetX extends GetView<MainController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("MainPage"),
+    return Center(
+      child: ElevatedButton(onPressed: () {
+        Get.toNamed(RouteNames.stylesStylesIndex);
+      }
+      , child: const Text("功能调试")),
     );
   }
 

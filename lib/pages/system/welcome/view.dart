@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:woo_commerce_getx/common/index.dart';
 
@@ -14,7 +15,11 @@ class WelcomePage extends GetView<WelcomeController> {
       init: controller,
       builder: (controller) => controller.items == null
           ? const SizedBox()
-          : WelcomeSliderWidget(controller.items!, onPageChanged: controller.onPageChanged),
+          : WelcomeSliderWidget(
+              controller.items!,
+              carouselController: controller.carouselController,
+              onPageChanged: controller.onPageChanged,
+            ),
     );
   }
 
@@ -24,10 +29,17 @@ class WelcomePage extends GetView<WelcomeController> {
       id: "bar",
       init: controller,
       builder: (controller) {
-        return <Widget>[
-          // 指示标
-          SliderIndicatorWidget(length: 3, currentIndex: controller.currentIndex),
-        ].toRow(mainAxisAlignment: MainAxisAlignment.spaceAround);
+        return controller.isShowStart
+            ? ButtonWidget.primary(LocaleKeys.welcomeStart.tr, onTap: controller.onToMain)
+                .tight(width: double.infinity, height: 50.h)
+            : <Widget>[
+                // 跳过
+                ButtonWidget.text(LocaleKeys.welcomeSkip.tr, onTap: controller.onToMain),
+                // 指示标
+                SliderIndicatorWidget(length: 3, currentIndex: controller.currentIndex),
+                // 下一页
+                ButtonWidget.text(LocaleKeys.welcomeNext.tr, onTap: controller.onNext),
+              ].toRow(mainAxisAlignment: MainAxisAlignment.spaceAround);
       },
     );
   }

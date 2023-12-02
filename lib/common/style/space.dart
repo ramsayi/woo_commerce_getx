@@ -13,7 +13,7 @@ class AppSpace {
 
   /// 输入框 - 10, 10 上下，左右
   static EdgeInsetsGeometry get edgeInput =>
-      const EdgeInsets.symmetric(vertical: 10, horizontal: 10);
+      const EdgeInsets.symmetric(vertical: 15, horizontal: 15);
 
   /// 列表视图
   static double get listView => 5;

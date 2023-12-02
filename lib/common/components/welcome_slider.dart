@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 /// 欢迎 slider
 class WelcomeSliderWidget extends StatelessWidget {

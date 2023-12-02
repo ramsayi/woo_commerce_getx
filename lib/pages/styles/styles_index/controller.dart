@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 class StylesIndexController extends GetxController {
   StylesIndexController();

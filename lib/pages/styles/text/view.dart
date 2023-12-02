@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 import 'index.dart';
 
@@ -18,7 +18,10 @@ class TextPage extends GetView<TextController> {
         const ListTile(title: TextWidget.body1("body1")),
         const ListTile(title: TextWidget.body2("body2")),
         const ListTile(title: TextWidget.body3("body3")),
-        ListTile(title: TextWidget.button(text: "button",)),
+        ListTile(
+            title: TextWidget.button(
+          text: "button",
+        )),
         const ListTile(title: TextWidget.navigation(text: "navigation")),
       ],
     );

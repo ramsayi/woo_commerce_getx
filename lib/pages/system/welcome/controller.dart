@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 class WelcomeController extends GetxController {
   WelcomeController();

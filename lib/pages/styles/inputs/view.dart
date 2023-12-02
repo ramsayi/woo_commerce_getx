@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 import 'index.dart';
 
@@ -8,7 +8,6 @@ class InputsPage extends GetView<InputsController> {
   const InputsPage({Key? key}) : super(key: key);
 
   // 主视图
-	// 主视图
   Widget _buildView() {
     return SingleChildScrollView(
       child: _buildInputs().center(),

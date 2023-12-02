@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
-import 'package:woo_commerce_getx/pages/index.dart';
+import 'package:woo/common/index.dart';
+import 'package:woo/pages/index.dart';
 
 import 'index.dart';
 

@@ -1,6 +1,6 @@
 {
-    "name": "woo_commerce_getx",
-    "short_name": "woo_commerce_getx",
+    "name": "woo",
+    "short_name": "woo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 import 'index.dart';
 
@@ -11,8 +11,7 @@ class MainPage extends StatefulWidget {
   State<MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage>
-    with AutomaticKeepAliveClientMixin {
+class _MainPageState extends State<MainPage> with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
 
@@ -29,10 +28,11 @@ class _MainViewGetX extends GetView<MainController> {
   // 主视图
   Widget _buildView() {
     return Center(
-      child: ElevatedButton(onPressed: () {
-        Get.toNamed(RouteNames.stylesStylesIndex);
-      }
-      , child: const Text("功能调试")),
+      child: ElevatedButton(
+          onPressed: () {
+            Get.toNamed(RouteNames.stylesStylesIndex);
+          },
+          child: const Text("功能调试")),
     );
   }
 

@@ -1,4 +1,4 @@
-# woo_commerce_getx
+# woo
 
 A new Flutter project.
 

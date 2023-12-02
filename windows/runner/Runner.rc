@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "woo.commerce.getx" "\0"
-            VALUE "FileDescription", "woo_commerce_getx" "\0"
+            VALUE "CompanyName", "com.getx.woo" "\0"
+            VALUE "FileDescription", "woo" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "woo_commerce_getx" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 woo.commerce.getx. All rights reserved." "\0"
-            VALUE "OriginalFilename", "woo_commerce_getx.exe" "\0"
-            VALUE "ProductName", "woo_commerce_getx" "\0"
+            VALUE "InternalName", "woo" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.getx.woo. All rights reserved." "\0"
+            VALUE "OriginalFilename", "woo.exe" "\0"
+            VALUE "ProductName", "woo" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

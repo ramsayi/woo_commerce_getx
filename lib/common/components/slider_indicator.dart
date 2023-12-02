@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:woo_commerce_getx/common/index.dart';
+import 'package:woo/common/index.dart';
 
 /// slider indicator 指示器
 class SliderIndicatorWidget extends StatelessWidget {

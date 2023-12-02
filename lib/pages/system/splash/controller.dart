@@ -15,15 +15,17 @@ class SplashController extends GetxController {
 
   _jumpToPage() {
     // 样式配置
-    if (ConfigService.to.isAlreadyOpen) {
-      Get.offAllNamed(RouteNames.systemWelcome);
-    } else {
-      Get.offAllNamed(RouteNames.main);
-    }
+    // if (ConfigService.to.isAlreadyOpen) {
+    //   Get.offAllNamed(RouteNames.systemWelcome);
+    // } else {
+    //   Get.offAllNamed(RouteNames.main);
+    // }
     // 欢迎页
     // Future.delayed(const Duration(milliseconds: 0), () {
     //   Get.offAllNamed(RouteNames.systemWelcome);
     // });
+    // 首页
+    Get.offAllNamed(RouteNames.main);
   }
 
   // @override

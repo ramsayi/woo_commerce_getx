@@ -1,6 +1,8 @@
 static const defaultPng = 'assets/images/default.png';
 static const homePlaceholderPng = 'assets/images/home_placeholder.png';
 static const logoPng = 'assets/images/logo.png';
+static const logo_1Png = 'assets/images/logo_1.png';
+static const logo_2Png = 'assets/images/logo_2.png';
 static const orderConfirmedPng = 'assets/images/order-confirmed.png';
 static const pCashPng = 'assets/images/p-cash.png';
 static const pMastercardPng = 'assets/images/p-mastercard.png';

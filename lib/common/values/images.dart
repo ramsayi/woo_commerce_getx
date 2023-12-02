@@ -11,4 +11,7 @@ class AssetsImages {
   static const welcome_1Png = 'assets/images/welcome_1.png';
   static const welcome_2Png = 'assets/images/welcome_2.png';
   static const welcome_3Png = 'assets/images/welcome_3.png';
+  static const logoPng = 'assets/images/logo.png';
+  static const logo_1Png = 'assets/images/logo_1.png';
+  static const logo_2Png = 'assets/images/logo_2.png';
 }

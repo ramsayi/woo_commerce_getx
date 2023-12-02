@@ -51,4 +51,10 @@ class LocaleKeys {
   static const registerFormFirstName = 'register_form_first_name';
   static const registerFormLastName = 'register_form_last_name';
   static const registerHaveAccount = 'register_have_account';
+
+  // 注册PIN - register pin
+  static const registerPinTitle = 'register_pin_title';
+  static const registerPinDesc = 'register_pin_desc';
+  static const registerPinFormTip = 'register_pin_form_tip';
+  static const registerPinButton = 'register_pin_button';
 }

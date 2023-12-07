@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:woo/common/index.dart';
 
@@ -26,14 +27,69 @@ class _MainPageState extends State<MainPage>
 class _MainViewGetX extends GetView<MainController> {
   const _MainViewGetX({Key? key}) : super(key: key);
 
-  // 主视图
-  Widget _buildView() {
-    return Center(
-      child: ElevatedButton(
-          onPressed: () {
-            Get.toNamed(RouteNames.stylesStylesIndex);
+	// 主视图
+	Widget _buildView() {
+    DateTime? _lastPressedAt;
+    return WillPopScope(
+      // 防止连续点击两次退出
+      onWillPop: () async {
+        if (_lastPressedAt == null ||
+            DateTime.now().difference(_lastPressedAt!) >
+                const Duration(seconds: 1)) {
+          _lastPressedAt = DateTime.now();
+          Loading.toast('再按一次退出');
+          return false;
+        }
+        await SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+        return true;
+      },
+      child: Scaffold(
+        extendBody: true,
+        resizeToAvoidBottomInset: false,
+        // 导航栏
+        bottomNavigationBar: GetBuilder<MainController>(
+          id: 'navigation',
+          builder: (controller) {
+            return BuildNavigation(
+              currentIndex: controller.currentIndex,
+              items: [
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarHome.tr,
+                  icon: AssetsSvgs.navHomeSvg,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarCart.tr,
+                  icon: AssetsSvgs.navCartSvg,
+                  count: 3,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarMessage.tr,
+                  icon: AssetsSvgs.navMessageSvg,
+                  count: 9,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarProfile.tr,
+                  icon: AssetsSvgs.navProfileSvg,
+                ),
+              ],
+              onTap: controller.onJumpToPage, // 切换tab事件
+            );
           },
-          child: const Text("功能调试")),
+        ),
+        // 内容页
+        body: PageView(
+          physics: const NeverScrollableScrollPhysics(),
+          controller: controller.pageController,
+          onPageChanged: controller.onIndexChanged,
+          children: const [
+            // 加入空页面占位
+            Center(child: Text("1")),
+            Center(child: Text("2")),
+            Center(child: Text("3")),
+            Center(child: Text("4")),
+          ],
+        ),
+      ),
     );
   }
 

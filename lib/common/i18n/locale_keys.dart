@@ -22,6 +22,12 @@ class LocaleKeys {
   static const validatorMax = 'validator_max';
   static const validatorPassword = 'validator_password';
 
+  // APP 主导航
+  static const tabBarHome = 'tab_bar_home';
+  static const tabBarCart = 'tab_bar_cart';
+  static const tabBarMessage = 'tab_bar_message';
+  static const tabBarProfile = 'tab_bar_profile';
+
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // 欢迎页

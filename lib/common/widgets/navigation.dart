@@ -1,16 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:woo/common/extension/ex_widget.dart';
 import 'package:woo/common/i18n/index.dart';
+
+/// 导航栏数据模型
+class NavigationItemModel {
+  final String label;
+  final IconData icon;
+  final int count;
+
+  NavigationItemModel({
+    required this.label,
+    required this.icon,
+    this.count = 0,
+  });
+}
 
 /// 导航栏
 class BuildNavigation extends StatefulWidget {
   final int currentIndex;
+  final List<NavigationItemModel> items;
   final Function(int) onTap;
 
   const BuildNavigation({
     Key? key,
     required this.currentIndex,
+    required this.items,
     required this.onTap,
   }) : super(key: key);
 
@@ -18,32 +34,34 @@ class BuildNavigation extends StatefulWidget {
   // ignore: no_logic_in_create_state
   State<BuildNavigation> createState() => BuildNavigationState(
         currentIndex: currentIndex,
+        items: items,
         onTap: onTap,
       );
 }
 
 class BuildNavigationState extends State<BuildNavigation> {
   int currentIndex;
+  final List<NavigationItemModel> items;
   final Function(int) onTap;
 
   BuildNavigationState({
     required this.currentIndex,
+    required this.items,
     required this.onTap,
   });
 
-  List<IconData> listOfIcons = [
-    Icons.home_outlined,
-    Icons.shopping_bag_outlined,
-    Icons.email_outlined,
-    Icons.person_outline_rounded,
-  ];
+  // 将items转换为listOfIcons和listOfStrings
+  List<IconData> listOfIcons = [];
+  List<String> listOfStrings = [];
 
-  List<String> listOfStrings = [
-    LocaleKeys.tabBarHome.tr,
-    LocaleKeys.tabBarCart.tr,
-    LocaleKeys.tabBarMessage.tr,
-    LocaleKeys.tabBarProfile.tr,
-  ];
+  @override
+  void initState() {
+    super.initState();
+    for (var item in items) {
+      listOfIcons.add(item.icon);
+      listOfStrings.add(item.label);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -132,11 +150,46 @@ class BuildNavigationState extends State<BuildNavigation> {
                           curve: Curves.fastLinearToSlowEaseIn,
                           width: index == currentIndex ? displayWidth * .05 : 20,
                         ),
-                        Icon(
-                          listOfIcons[index],
-                          size: displayWidth * .076,
-                          color: index == currentIndex ? Colors.blueAccent : Colors.black26,
+                        // 为Icon右上角添加Badge
+                        Stack(
+                          children: [
+                            Icon(
+                              listOfIcons[index],
+                              size: displayWidth * .076,
+                              color: index == currentIndex ? Colors.blueAccent : Colors.black26,
+                            ),
+                            // 角标根据count的值显示
+                            if (items[index].count > 0)
+                              Positioned(
+                                right: 0,
+                                top: 0,
+                                child: Container(
+                                  padding: const EdgeInsets.all(.5),
+                                  decoration: BoxDecoration(
+                                    color: const Color.fromARGB(255, 98, 156, 255),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  constraints: const BoxConstraints(
+                                    minWidth: 12,
+                                    minHeight: 12,
+                                  ),
+                                  child: Text(
+                                    items[index].count.toString(),
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 8,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ).paddingBottom(1),
+                                ),
+                              ),
+                          ],
                         ),
+                        // Icon(
+                        //   listOfIcons[index],
+                        //   size: displayWidth * .076,
+                        //   color: index == currentIndex ? Colors.blueAccent : Colors.black26,
+                        // ),
                       ],
                     ),
                   ],

@@ -52,26 +52,26 @@ class _MainViewGetX extends GetView<MainController> {
           builder: (controller) {
             return BuildNavigation(
               currentIndex: controller.currentIndex,
-              // items: [
-              //   NavigationItemModel(
-              //     label: LocaleKeys.tabBarHome.tr,
-              //     icon: AssetsSvgs.navHomeSvg,
-              //   ),
-              //   NavigationItemModel(
-              //     label: LocaleKeys.tabBarCart.tr,
-              //     icon: AssetsSvgs.navCartSvg,
-              //     count: 3,
-              //   ),
-              //   NavigationItemModel(
-              //     label: LocaleKeys.tabBarMessage.tr,
-              //     icon: AssetsSvgs.navMessageSvg,
-              //     count: 9,
-              //   ),
-              //   NavigationItemModel(
-              //     label: LocaleKeys.tabBarProfile.tr,
-              //     icon: AssetsSvgs.navProfileSvg,
-              //   ),
-              // ],
+              items: [
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarHome.tr,
+                  icon: Icons.home_outlined,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarCart.tr,
+                  icon: Icons.shopping_bag_outlined,
+                  count: 3,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarMessage.tr,
+                  icon: Icons.email_outlined,
+                  count: 99,
+                ),
+                NavigationItemModel(
+                  label: LocaleKeys.tabBarProfile.tr,
+                  icon: Icons.person_outline_rounded,
+                ),
+              ],
               onTap: controller.onJumpToPage, // 切换tab事件
             );
           },

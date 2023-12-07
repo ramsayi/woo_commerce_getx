@@ -5,15 +5,21 @@ import 'package:woo/common/index.dart';
 class SplashController extends GetxController {
   SplashController();
 
-  _initData() {
-    // 删除设备启动图
-    FlutterNativeSplash.remove();
-    update(["splash"]);
-  }
+  // _initData() {
+  //   update(["splash"]);
+  // }
 
   void onTap() {}
 
   _jumpToPage() {
+    Future.delayed(const Duration(seconds: 1)).then((_) {
+      if (!ConfigService.to.isAlreadyOpen) {
+        Get.offAllNamed(RouteNames.main);
+      } else {
+        Get.offAllNamed(RouteNames.systemWelcome);
+      }
+    });
+
     // 样式配置
     // if (ConfigService.to.isAlreadyOpen) {
     //   Get.offAllNamed(RouteNames.systemWelcome);
@@ -36,9 +42,11 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    _initData();
 
-    _jumpToPage(); // 跳转到欢迎页
+    // 删除设备启动图
+    FlutterNativeSplash.remove();
+
+    _jumpToPage(); // 跳转页面
   }
 
   // @override

@@ -32,10 +32,10 @@ class BuildNavigationState extends State<BuildNavigation> {
   });
 
   List<IconData> listOfIcons = [
-    Icons.home_rounded,
-    Icons.favorite_rounded,
-    Icons.settings_rounded,
-    Icons.person_rounded,
+    Icons.home_outlined,
+    Icons.shopping_bag_outlined,
+    Icons.email_outlined,
+    Icons.person_outline_rounded,
   ];
 
   List<String> listOfStrings = [
@@ -130,7 +130,7 @@ class BuildNavigationState extends State<BuildNavigation> {
                         AnimatedContainer(
                           duration: const Duration(seconds: 1),
                           curve: Curves.fastLinearToSlowEaseIn,
-                          width: index == currentIndex ? displayWidth * .03 : 20,
+                          width: index == currentIndex ? displayWidth * .05 : 20,
                         ),
                         Icon(
                           listOfIcons[index],

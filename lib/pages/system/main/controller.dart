@@ -44,7 +44,7 @@ class MainController extends GetxController {
     super.onReady();
     _initData();
 
-    Get.toNamed(RouteNames.systemRegister);
+    // Get.toNamed(RouteNames.systemRegister);
   }
 
   @override

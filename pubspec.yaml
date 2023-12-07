@@ -53,6 +53,7 @@ dependencies:
   pinput: ^3.0.1
   flutter_easyloading: ^3.0.5
   encrypt: ^5.0.3
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:

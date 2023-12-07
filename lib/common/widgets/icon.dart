@@ -140,6 +140,7 @@ class IconWidget extends StatelessWidget {
           assetName!,
           width: width ?? size,
           height: height ?? size,
+          // ignore: deprecated_member_use
           color: color,
           fit: fit ?? BoxFit.contain,
         );

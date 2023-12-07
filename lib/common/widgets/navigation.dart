@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:woo/common/extension/ex_widget.dart';
-import 'package:woo/common/i18n/index.dart';
 
 /// 导航栏数据模型
 class NavigationItemModel {
@@ -185,11 +183,6 @@ class BuildNavigationState extends State<BuildNavigation> {
                               ),
                           ],
                         ),
-                        // Icon(
-                        //   listOfIcons[index],
-                        //   size: displayWidth * .076,
-                        //   color: index == currentIndex ? Colors.blueAccent : Colors.black26,
-                        // ),
                       ],
                     ),
                   ],

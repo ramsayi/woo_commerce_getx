@@ -29,14 +29,15 @@ class _MainViewGetX extends GetView<MainController> {
 
 	// 主视图
 	Widget _buildView() {
-    DateTime? _lastPressedAt;
+    DateTime? lastPressedAt;
+    // ignore: deprecated_member_use
     return WillPopScope(
       // 防止连续点击两次退出
       onWillPop: () async {
-        if (_lastPressedAt == null ||
-            DateTime.now().difference(_lastPressedAt!) >
+        if (lastPressedAt == null ||
+            DateTime.now().difference(lastPressedAt!) >
                 const Duration(seconds: 1)) {
-          _lastPressedAt = DateTime.now();
+          lastPressedAt = DateTime.now();
           Loading.toast('再按一次退出');
           return false;
         }

@@ -98,7 +98,9 @@ class BuildNavigationState extends State<BuildNavigation> {
               AnimatedContainer(
                 duration: const Duration(seconds: 1),
                 curve: Curves.fastLinearToSlowEaseIn,
-                width: index == currentIndex ? displayWidth * .32 : displayWidth * .18,
+                width: index == currentIndex
+                    ? displayWidth * .32
+                    : displayWidth * .18,
                 alignment: Alignment.center,
                 child: AnimatedContainer(
                   duration: const Duration(seconds: 1),
@@ -106,7 +108,9 @@ class BuildNavigationState extends State<BuildNavigation> {
                   height: index == currentIndex ? displayWidth * .12 : 0,
                   width: index == currentIndex ? displayWidth * .32 : 0,
                   decoration: BoxDecoration(
-                    color: index == currentIndex ? Colors.blueAccent.withOpacity(.2) : Colors.transparent,
+                    color: index == currentIndex
+                        ? Colors.blueAccent.withOpacity(.2)
+                        : Colors.transparent,
                     borderRadius: BorderRadius.circular(50),
                   ),
                 ),
@@ -114,7 +118,9 @@ class BuildNavigationState extends State<BuildNavigation> {
               AnimatedContainer(
                 duration: const Duration(seconds: 1),
                 curve: Curves.fastLinearToSlowEaseIn,
-                width: index == currentIndex ? displayWidth * .31 : displayWidth * .18,
+                width: index == currentIndex
+                    ? displayWidth * .31
+                    : displayWidth * .18,
                 alignment: Alignment.center,
                 child: Stack(
                   children: [
@@ -146,7 +152,8 @@ class BuildNavigationState extends State<BuildNavigation> {
                         AnimatedContainer(
                           duration: const Duration(seconds: 1),
                           curve: Curves.fastLinearToSlowEaseIn,
-                          width: index == currentIndex ? displayWidth * .05 : 20,
+                          width:
+                              index == currentIndex ? displayWidth * .05 : 20,
                         ),
                         // 为Icon右上角添加Badge
                         Stack(
@@ -154,7 +161,9 @@ class BuildNavigationState extends State<BuildNavigation> {
                             Icon(
                               listOfIcons[index],
                               size: displayWidth * .076,
-                              color: index == currentIndex ? Colors.blueAccent : Colors.black26,
+                              color: index == currentIndex
+                                  ? Colors.blueAccent
+                                  : Colors.black26,
                             ),
                             // 角标根据count的值显示
                             if (items[index].count > 0)
@@ -164,7 +173,8 @@ class BuildNavigationState extends State<BuildNavigation> {
                                 child: Container(
                                   padding: const EdgeInsets.all(.5),
                                   decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 98, 156, 255),
+                                    color:
+                                        const Color.fromARGB(255, 98, 156, 255),
                                     borderRadius: BorderRadius.circular(6),
                                   ),
                                   constraints: const BoxConstraints(

@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:woo/common/index.dart';
 import 'package:woo/pages/index.dart';
 
-
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -27,8 +26,8 @@ class _MainPageState extends State<MainPage>
 class _MainViewGetX extends GetView<MainController> {
   const _MainViewGetX({Key? key}) : super(key: key);
 
-	// 主视图
-	Widget _buildView() {
+  // 主视图
+  Widget _buildView() {
     DateTime? lastPressedAt;
     // ignore: deprecated_member_use
     return WillPopScope(

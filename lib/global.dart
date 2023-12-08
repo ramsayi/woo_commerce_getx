@@ -25,7 +25,7 @@ class Global {
     });
   }
 
-    // 系统样式
+  // 系统样式
   static void setSystemUi() {
     if (GetPlatform.isMobile) {
       // 屏幕方向 竖直上

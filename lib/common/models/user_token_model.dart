@@ -1,17 +1,15 @@
 class UserTokenModel {
-	String? token;
+  String? token;
 
-	UserTokenModel({this.token});
+  UserTokenModel({this.token});
 
-	factory UserTokenModel.fromJson(Map<String, dynamic> json) {
-		return UserTokenModel(
-			token: json['token'] as String?,
-		);
-	}
+  factory UserTokenModel.fromJson(Map<String, dynamic> json) {
+    return UserTokenModel(
+      token: json['token'] as String?,
+    );
+  }
 
-
-
-	Map<String, dynamic> toJson() => {
-				'token': token,
-			};
+  Map<String, dynamic> toJson() => {
+        'token': token,
+      };
 }

@@ -31,7 +31,9 @@ class RegisterPinController extends GetxController {
 
   // 验证 pin
   String? pinValidator(val) {
-    return val == '111111' ? null : LocaleKeys.commonMessageIncorrect.trParams({"method": "Pin"});
+    return val == '111111'
+        ? null
+        : LocaleKeys.commonMessageIncorrect.trParams({"method": "Pin"});
   }
 
   // 注册

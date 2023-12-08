@@ -69,17 +69,23 @@ class HomePage extends GetView<HomeController> {
 
   // 分类导航
   Widget _buildCategories() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return Container()
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // Flash Sell
   Widget _buildFlashSell() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return Container()
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // New Sell
   Widget _buildNewSell() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return Container()
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // 主视图
@@ -94,14 +100,18 @@ class HomePage extends GetView<HomeController> {
 
         // Flash Sell
         // title
-        Text(LocaleKeys.gHomeFlashSell.tr).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page),
+        Text(LocaleKeys.gHomeFlashSell.tr)
+            .sliverToBoxAdapter()
+            .sliverPaddingHorizontal(AppSpace.page),
 
         // list
         _buildFlashSell(),
 
         // new product
         // title
-        Text(LocaleKeys.gHomeNewProduct.tr).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page),
+        Text(LocaleKeys.gHomeNewProduct.tr)
+            .sliverToBoxAdapter()
+            .sliverPaddingHorizontal(AppSpace.page),
 
         // list
         _buildNewSell(),

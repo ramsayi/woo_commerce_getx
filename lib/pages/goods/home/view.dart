@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:woo/common/index.dart';
 
@@ -18,7 +19,7 @@ class HomePage extends GetView<HomeController> {
       titleSpacing: AppSpace.listItem,
       // 搜索栏
       title: Container(
-        padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+        padding: const EdgeInsets.fromLTRB(9, 0, 0, 0),
         child: InputWidget.search(
           // 提示文字，多语言
           hintText: LocaleKeys.gHomeNewProduct.tr,
@@ -39,7 +40,7 @@ class HomePage extends GetView<HomeController> {
             .unconstrained() // 去掉约束, appBar 会有个约束下来
             .padding(
               left: AppSpace.listItem,
-              right: 24,
+              right: 20,
             ),
       ],
     );
@@ -47,7 +48,23 @@ class HomePage extends GetView<HomeController> {
 
   // 轮播广告
   Widget _buildBanner() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return GetBuilder<HomeController>(
+            init: controller,
+            id: "home_banner",
+            builder: (_) {
+              return CarouselWidget(
+                items: controller.bannerItems,
+                currentIndex: controller.bannerCurrentIndex,
+                onPageChanged: controller.onChangeBanner,
+                height: 130.w,
+              );
+            })
+        .marginOnly(
+          top: 20,
+        )
+        .clipRRect(all: AppSpace.button)
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // 分类导航

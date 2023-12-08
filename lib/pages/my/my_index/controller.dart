@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:woo/common/index.dart';
 
 class MyIndexController extends GetxController {
   MyIndexController();
@@ -8,6 +9,10 @@ class MyIndexController extends GetxController {
   }
 
   void onTap() {}
+
+  void onPressed() {
+    Get.toNamed(RouteNames.stylesStylesIndex);
+  }
 
   // @override
   // void onInit() {

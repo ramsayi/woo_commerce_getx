@@ -8,8 +8,8 @@ class MyIndexPage extends GetView<MyIndexController> {
 
   // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("MyIndexPage"),
+    return Center(
+      child: ElevatedButton(onPressed: controller.onPressed, child: const Text("调试页面")),
     );
   }
 
